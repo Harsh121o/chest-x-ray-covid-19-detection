@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Covi-tech | Home {% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href='{% static "home/css/style.css" %}'>
+{% endblock style %}
+
+{% block content %}
+<!-- Showcase starts -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src='{% static "home/images/bannerhome.jpg" %}' class="d-block w-100" alt="banner_home">
+        </div>
+        <div class="showcase">
+            <div class="showcase-text">
+                <h5>Covid detection made quick and easy from comfort of your home.</h5>
+            </div>
+            <div class="showcase-btn">
+                <a class="showcase-btn-text" href="{% url 'predict:upload_image' %}">DETECT COVID</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Showcase ends -->
+
+<!-- About section starts -->
+<div class="container">
+    <div class="row about-us">
+        <div class="col">
+            <h1>About US</h1>
+        </div>
+        <div class="col-9">
+            <p>
+                We are a group is students from IIITDMJ who aim to make COVID-19 detection hassle free. We want to make
+                the process faster, highly accurate, and cost-effective for all people from over the country. We have
+                worked on a digital and physical solution for this objective and our product Covi-tech is a step towards
+                making COVID-19 detection efficient and quick for everyone.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- About section ends -->
+
+<!-- Testimony section starts -->
+<!-- Testimony section ends -->
+{% endblock content %}
